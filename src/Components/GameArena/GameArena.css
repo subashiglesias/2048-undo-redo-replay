@@ -1,0 +1,31 @@
+.game-arena {
+    height: 38rem;
+    width: 34rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #faf8ef;
+}
+
+.game-arena__header {
+    padding:  1rem 1rem 1rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+}
+
+.game-arena__score {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+h1.title {
+    font-size: 70px;
+    font-weight: bold;
+    color: #4f4024;
+    margin: 0;
+    display: block;
+    float: left;
+}

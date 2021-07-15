@@ -1,0 +1,12 @@
+.game-arena {
+    position: absolute;
+    height: 36rem;
+    width: 41rem;
+    background-color: white;
+}
+
+.game-arena__header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

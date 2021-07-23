@@ -138,7 +138,7 @@ const GameBoard = ({scoreUpdater, score}) => {
     return (
         <div className="game-board">
             <p className="game-arena__description">Join the numbers and get to <b>2048</b> tile!</p>
-            <button ><img className="new" src={newImage} alt={'newGame'} onClick={newGame}/></button>
+            <button ><img height={8} className={replayAction ? 'new disabled' : 'new'}  src={newImage} alt={'newGame'} onClick={newGame}/></button>
             <div className="game-board__area">
                 {board.map((row, i) => {
                     return (

@@ -8,12 +8,13 @@
 }
 
 .game-arena__header {
-    padding:  1rem 1rem 1rem 1rem;
+    padding: 1rem;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    width: 90%;
 }
+
 
 .game-arena__score {
     display: flex;
@@ -22,10 +23,24 @@
 }
 
 h1.title {
-    font-size: 70px;
+    font-size: 3rem;
     font-weight: bold;
     color: #4f4024;
-    margin: 0;
-    display: block;
-    float: left;
+}
+
+@media only screen and (max-device-width: 480px) {
+
+    .game-arena {
+        width: 100%;
+        height: unset;
+    }
+    .game-arena__header {
+        align-items: end;
+        width: 100%;
+    }
+
+    h1.title {
+        font-size: 2.5rem;
+        line-height: 0.8;
+    }
 }

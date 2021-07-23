@@ -2,7 +2,6 @@
     background-color: #967b6e;
     display: flex;
     flex-direction: column;
-    min-height: 27rem;
     min-width: 31rem;
     padding: 4px;
 }
@@ -34,13 +33,13 @@
 }
 
 img {
-    height: 5rem;
+    height: 3rem;
     width: 5rem;
     cursor: pointer;
 }
 
 img.disabled {
-    height: 5rem;
+    height: 3rem;
     width: 5rem;
     pointer-events: none;
     opacity: 0.5;

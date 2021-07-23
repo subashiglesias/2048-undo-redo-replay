@@ -6,6 +6,7 @@ import redoImage from './../../images/redo.svg'
 import replayImage from './../../images/replay.svg'
 import newImage from './../../images/new.svg'
 import './GameBoard.css';
+import ButtonImage from "../ButtonImage/ButtonImage";
 
 const Cell = ({number}) => {
     return (
@@ -137,8 +138,10 @@ const GameBoard = ({scoreUpdater, score}) => {
 
     return (
         <div className="game-board">
-            <p className="game-arena__description">Join the numbers and get to <b>2048</b> tile!</p>
-            <button ><img height={8} className={replayAction ? 'new disabled' : 'new'}  src={newImage} alt={'newGame'} onClick={newGame}/></button>
+            <div className="game-board__header">
+                <p className="game-arena__description">Join the numbers and get to <b>2048</b> tile!</p>
+                <ButtonImage height={8} className={replayAction ? 'new disabled' : 'new'}  src={newImage} alt={'newGame'} onClick={newGame}/>
+            </div>
             <div className="game-board__area">
                 {board.map((row, i) => {
                     return (
@@ -151,11 +154,10 @@ const GameBoard = ({scoreUpdater, score}) => {
                 })}
             </div>
             <div className="game-board__controls">
-                <button><img className={(actionCount === history.board.length - 1 || replayAction) ? 'disabled' : ''}
-                    src={undoImage} alt={'undo'} onClick={undo}/></button>
-                <button><img className={(history.board.length === 1) ? 'disabled' : ''} src={replayImage} alt={'replay'} onClick={replay}/></button>
-                <button><img className={(actionCount === 0 || replayAction) ? 'disabled' : ''} src={redoImage}
-                                                                                         alt={'redo'} onClick={redo}/></button>
+                <ButtonImage className={(actionCount === history.board.length - 1 || replayAction) ? 'disabled' : ''}
+                    src={undoImage} alt={'undo'} onClick={undo}/>
+                <ButtonImage className={(history.board.length === 1 || replayAction) ? 'disabled' : ''} src={replayImage} alt={'replay'} onClick={replay}/>
+                <ButtonImage className={(actionCount === 0 || replayAction) ? 'disabled' : ''} src={redoImage} alt={'redo'} onClick={redo}/>
             </div>
         </div>
     );
